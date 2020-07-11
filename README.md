@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] Use slider to adjust tip amount
+- [x] Use slider to adjust tip amount
 
 ## Video Walkthrough 
 
