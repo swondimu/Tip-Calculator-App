@@ -16,19 +16,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControlSlider: UISlider!
     @IBOutlet weak var tipTotal: UILabel!
+    @IBOutlet weak var totalView: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        billAmountTextField.becomeFirstResponder()
         self.billAmountTextField.keyboardType = UIKeyboardType.decimalPad
         self.totalLabel.adjustsFontSizeToFitWidth = true
+        self.totalView.isHidden = true
         // Do any additional setup after loading the view.
     }
 
    
     @IBAction func onTap(_ sender: Any) {
     }
+    
     @IBAction func calculateTip(_ sender: Any) {
+        self.totalView.isHidden = false
         //get initial bill amount and calculate tips
         let bill = Float(billAmountTextField.text!) ?? 0
         
